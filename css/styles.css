@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+/***** Balises *****/
+body {
+    background-color: #F8F8F8;
+    color: #191818;
+    font-family: "Brandon Grotesque", sans-serif;
+    font-weight: 900;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-size: 1em;
+}
+p { 
+    font-size: 22px;
+    font-weight: 500;
+}
+li {list-style: none;}
+main {overflow: hidden;}
+section:not(:first-of-type){padding-top: 100px;}
+h1, h2, h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #F8F8F8;
+}
+h2 {color: #191818;}
+
+/***** class commune *****/
+.flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.container {width: 90%; margin: auto;}
+.margin-bottom{margin-bottom: 30px;}
+.text-center {text-align: center;}
+.title-green {display: block;color: #48A086;}
+.title-img {margin-top: 10px;width: 50px;}
+.uppercase {text-transform: uppercase;}
+.bg-black{background-color: #000;}
+.logo {height: 12vh; vertical-align: middle;}
+.vague {vertical-align: bottom;width: 100%;}
+.order {order: 0;}
+.title-line {
+    height: 10px;
+    background-color: #000;
+    width: 40px;
+    margin: 10px auto 0;
+}
+/* btn */
+.btn {
+    background-color: #48A086;
+    padding: 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s linear;
+    font-size: 16px;
+    font-weight: 500;
+    justify-content: center;
+    gap: 15px;
+    width: 90%;
+    margin: auto;
+}
+.secondary {
+    background-color: #000;
+}
+/* btn hover */
+.btn:hover {
+    background-color: #F8F8F8;
+}
+.primary:hover {
+    color: #48A086;
+}
+.secondary:hover {
+    color: #000;
+}
+
+/***** Header *****/
+.bandeau span {
+    height: 1vh;
+    width: 50%;
+}
+.bandeau span:first-of-type {background-color: #48A086;}
+
+/**** call-to-action ****/
+.call-to-action {
+    position: relative;
+    height: 87vh;
+}
+/*** call-to-action_img ***/
+.call-to-action_img{
+    height: 40%;
+    width: 100%;
+    text-align: right;
+}
+.call-to-action_img img {
+    width: auto;
+    vertical-align: middle;
+    height: 100%;
+    object-fit: cover;
+}
+/*** call-to-action_text ***/
+.call-to-action_text {
+    justify-content: space-around;
+    width: 100%;
+}
+.call-to-action_text .title{margin-bottom: 15px;}
+/** call-to-action_btn **/
+.call-to-action_btn {
+    gap: 20px;
+    justify-content: space-around;
+    width: 100%;
+}
+.call-to-action_btn .secondary {border: 1px solid #fff;}
+/** call-to-action_bg **/
+.call-to-action_bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    right: 0;
+    z-index: -1;
+    border-bottom-left-radius: 32px;border-top-left-radius: 32px;
+}
+/* autoplus */
+.autoplus {margin-top: 2vh;}
+.autoplus-img {height: 10vh;}
+.autoplus p {width: 90%;margin: auto;font-size: 18px;}
+
+/***** Nos avantages *****/
+.avantages-content{gap: 50px;}
+.avantages-content .flex-column {gap: 30px;}
+.avantages-img,.avantages-img img, .avantages-text{width: 100%;}
+.avantages-img {
+    border-radius: 32px;
+    border: 8px solid #000;
+    overflow: hidden;
+}
+.avantages-img img {
+    vertical-align: middle;
+    height: 100%;
+    object-fit: cover;
+}
+.avantages-text h3 {font-size: 20px;}
+.parcours {display: none;}
+
+/***** Compatible avec toutes les assurances *****/
+.compatible-content{
+    background-color: #48A086;
+    gap: 30px;
+    margin-top: -2px;
+}
+.compatible-content h2{color: #F8F8F8;}
+.compatible-content h2 span{
+    background-color: #F8F8F8;
+    display: inline-block;
+    padding: 0 6px;
+    border-radius: 6px;
+}
+.compatible-content .title-line {
+    background-color: #F8F8F8;  
+}
+.compatible-text p {
+    color: #F8F8F8;
+    margin: auto;
+    width: 90%;
+}
+.compatible-content .btn{margin: 0 auto 20px;}
+
+/***** 40 000 avis positifs, voici quelqies témoignages*****/
+
+
+/***** Trouver mon centre *****/
+.centre-content, .centre-content form {gap: 40px;align-items: center;}
+.centre-content {padding-bottom: 100px;}
+.centre-content h2{
+    color: #F8F8F8;
+    font-size: 24px;
+    width: 90%;
+    margin: auto;
+}
+.centre-content h2:last-of-type {font-size: 18px;}
+
+/* centre-content form */
+.centre-content form {
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+}
+.centre-content form input {
+    font-size: 16px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    padding: 16px;
+    width: 90%;
+    font-weight: 500;
+}
+.centre-content form .submit {
+    background-color: #48A086;
+    color: #F8F8F8;
+    cursor: pointer;
+    width: 90%;
+}
+.recherche-centre p:last-of-type {font-size: 18px; margin-left: auto;}
+
+/***** Une entreprise Française *****/
+.entreprise-content {padding: 0 5%;}
+.entreprise-content, .entreprise-text {gap: 30px;}
+.entreprise-img {border-radius: 32px; overflow: hidden;}
+.entreprise-img img {
+    vertical-align: middle;
+    height: 100%;   
+    width: 100%;
+    object-fit: cover;
+}
+.entreprise-text, .entreprise-title h2 {
+    color: #F8F8F8;
+}
+
+/***** footer *****/
+footer{padding: 100px 0;}
+
+/***** @media queries *****/
+@media screen and (min-width: 375px) {
+   .margin-bottom{margin-bottom: 25px;}
+   h1,h2{font-size: 32px;}
+   .call-to-action{height: 86vh;}
+}
+
+@media screen and (min-width: 425px) {
+    h1,h2{font-size: 38px;}
+}
+
+@media screen and (min-width: 600px) {
+    h1,h2 {font-size: 4.2vw;}
+
+    /***** Call -o action *****/
+    .call-to-action {flex-direction: initial;}
+
+    .call-to-action_img, .call-to-action_text {height: 100%; width: 50%;}
+    .call-to-action_text {
+        order: -1;
+        text-align: left;
+        padding-left: 4vw;
+    }
+    /***** Trouver mon centre *****/
+    .centre-content form {flex-direction: initial;}
+
+    /*****Nos avantages*****/
+    .avantages-content .flex-column {
+        flex-direction: initial;
+        align-items: center;
+    }
+    .avantages-img {width: 30%;}
+    .avantages-text {width: 70%; text-align: left;}
+    .avantages-text .title-line {margin: 10px auto 0 0;}
+    .order {order: -1;}
+    .call-to-action_btn .btn {margin: 0 auto 0 0;}
+
+    /***** Une entreprise Française *****/
+    .entreprise-content {flex-direction: initial; gap: 5%;}
+    .entreprise-img {width: 40%;}
+    .entreprise-text {width: 60%;}
+    .entreprise-text p {width: 80%;}
+    .entreprise-content .btn {margin: 0 auto 0 0;}
+}
+
+@media screen and (min-width: 1280px) {
+    h2 {font-size: 56px;}
+    p {font-size: 28px;}
+    /***** Trouver mon centre *****/
+    .centre-content, .centre-content form {gap: 25px;}
+    .centre-content {flex-direction: initial; justify-content: center;}
+    .centre-content h2:first-of-type, .centre-content h2:last-of-type  {width: max-content; margin: 0;}
+    .centre-content h2:last-of-type {text-align: end; margin-left: 75px;}
+    .centre-content h2:last-of-type span  {display: block;} 
+}
+
+@media screen and (min-width: 1440px) {
+    h2 {font-size: 72px;}
+    p {font-size: 28px;}
+    /***** Trouver mon centre *****/
+    .centre-content form input {width: 400px;}
+    .centre-content h2:first-of-type {font-size: 32px;}
+    .centre-content h2:last-of-type {font-size: 22px;}
+}
