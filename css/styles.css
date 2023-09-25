@@ -19,7 +19,7 @@ li {list-style: none;}
 main {overflow: hidden;}
 section:not(:first-of-type){padding-top: 100px;}
 h1, h2, h3 {
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 700;
     color: #F8F8F8;
 }
@@ -42,7 +42,7 @@ h2 {color: #191818;}
 .title-img {margin-top: 10px;width: 50px;}
 .uppercase {text-transform: uppercase;}
 .bg-black{background-color: #000;}
-.logo {height: 12vh; vertical-align: middle;}
+.logo {height: 75px; vertical-align: middle;}
 .vague {vertical-align: bottom;width: 100%;}
 .order {order: 0;}
 .title-line {
@@ -59,30 +59,22 @@ h2 {color: #191818;}
     text-decoration: none;
     color: #fff;
     transition: 0.3s linear;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 500;
     justify-content: center;
     gap: 15px;
     width: 90%;
     margin: auto;
 }
-.secondary {
-    background-color: #000;
-}
+.secondary {background-color: #000;}
 /* btn hover */
-.btn:hover {
-    background-color: #F8F8F8;
-}
-.primary:hover {
-    color: #48A086;
-}
-.secondary:hover {
-    color: #000;
-}
+.btn:hover {background-color: #F8F8F8;}
+.primary:hover {color: #48A086;}
+.secondary:hover { color: #000;}
 
 /***** Header *****/
 .bandeau span {
-    height: 1vh;
+    height: 8px;
     width: 50%;
 }
 .bandeau span:first-of-type {background-color: #48A086;}
@@ -90,7 +82,7 @@ h2 {color: #191818;}
 /**** call-to-action ****/
 .call-to-action {
     position: relative;
-    height: 87vh;
+    height: 480px;
 }
 /*** call-to-action_img ***/
 .call-to-action_img{
@@ -109,10 +101,10 @@ h2 {color: #191818;}
     justify-content: space-around;
     width: 100%;
 }
-.call-to-action_text .title{margin-bottom: 15px;}
+.call-to-action_text .title{margin-bottom: 10px;}
 /** call-to-action_btn **/
 .call-to-action_btn {
-    gap: 20px;
+    gap: 15px;
     justify-content: space-around;
     width: 100%;
 }
@@ -121,15 +113,15 @@ h2 {color: #191818;}
 .call-to-action_bg {
     position: absolute;
     height: 100%;
-    width: 100%;
+    width: 98%;
     right: 0;
     z-index: -1;
     border-bottom-left-radius: 32px;border-top-left-radius: 32px;
 }
 /* autoplus */
 .autoplus {margin-top: 2vh;}
-.autoplus-img {height: 10vh;}
-.autoplus p {width: 90%;margin: auto;font-size: 18px;}
+.autoplus-img {height: 100px;}
+.autoplus p {width: 90%; margin: auto;font-size: 18px;}
 
 /***** Nos avantages *****/
 .avantages-content{gap: 50px;}
@@ -229,7 +221,6 @@ footer{padding: 100px 0;}
 @media screen and (min-width: 375px) {
    .margin-bottom{margin-bottom: 25px;}
    h1,h2{font-size: 32px;}
-   .call-to-action{height: 86vh;}
 }
 
 @media screen and (min-width: 425px) {
