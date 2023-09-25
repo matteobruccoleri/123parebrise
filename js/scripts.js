@@ -1,10 +1,9 @@
-// NOTRE METIER NOS AVANTAGES
-// ANIMATION PARCOURS
+// Nos avantages
+// Animation Parcours
 
 const { scrollTop, clientHeight } = document.documentElement;
 
-/* ANIM-PARCOURS 1*/
-
+/* Parcours 1*/
 const cache1 = document.querySelector('.cache1');
 
 window.addEventListener('scroll', () => {
@@ -18,8 +17,7 @@ window.addEventListener('scroll', () => {
 
 });
 
-/* ANIM-PARCOURS 2*/
-
+/* Parcours 2*/
 const cache2 = document.querySelector('.cache2');
 
 window.addEventListener('scroll', () => {
@@ -31,33 +29,33 @@ window.addEventListener('scroll', () => {
   };
 });
 
-// IL VOUS RESTE DES QUESTIONS
-// ANIMATION ACCORDEON
-var acc = document.getElementsByClassName("accordion");
-const accordeonArrow = document.querySelector(".accordion-arrow");
+// Il vous reste des questions
+// Animaiona acordion
+const accordionItemTitles = document.querySelectorAll(".accordion-item-title");
 
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function () {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
+accordionItemTitles.forEach(accordionItemTitle => {
+  accordionItemTitle.addEventListener("click", event => {
     
+     
+// Décommentez si vous souhaitez autoriser l'affichage d'un seul élément réduit à la fois !
+    
+//     const currentlyActiveAccordionItemHeader = document.querySelector(".accordion-item-header.active");
+//     if(currentlyActiveAccordionItemHeader && currentlyActiveAccordionItemHeader!==accordionItemHeader) {
+//        currentlyActiveAccordionItemHeader.classList.toggle("active");
+//        currentlyActiveAccordionItemHeader.nextElementSibling.style.maxHeight = 0;
+//      }
 
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-      //accordeonArrow.style.rotate ="180deg";
-      accordeonArrow.classList.remove("rotate");
-      
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-      //accordeonArrow.style.rotate ="0deg";
-      accordeonArrow.classList.add("rotate");
-    }
-
-  });
-
-}
+    accordionItemTitle.classList.toggle("active");
+     const accordionItemText = accordionItemTitle.nextElementSibling;
+     if(accordionItemTitle.classList.contains("active")) {
+      accordionItemText.style.maxHeight = accordionItemText.scrollHeight + "px";
+     }
+     else {
+      accordionItemText.style.maxHeight = 0;
+     }
+    
+   });
+});
 
 
 // BESOIN D ETRE RASSUREE

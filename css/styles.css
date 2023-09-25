@@ -19,11 +19,12 @@ li {list-style: none;}
 main {overflow: hidden;}
 section:not(:first-of-type){padding-top: 100px;}
 h1, h2, h3 {
-    font-size: 26px;
     font-weight: 700;
     color: #F8F8F8;
     line-height: 120%;
 }
+h1{font-size: 8.5vw}
+h2, h3 {font-size: 32px;}
 h2 {color: #191818;}
 
 /***** class commune *****/
@@ -50,7 +51,6 @@ h2 {color: #191818;}
     height: 10px;
     background-color: #000;
     width: 40px;
-    margin: 10px auto 0;
 }
 /* btn */
 .btn {
@@ -100,7 +100,6 @@ h2 {color: #191818;}
 .call-to-action_text {
     justify-content: space-around;
     width: 100%;
-    padding: 5% 0 5% 5%;
 }
 /** call-to-action_btn **/
 .call-to-action_btn {
@@ -156,6 +155,7 @@ h2 {color: #191818;}
 }
 .compatible-content .title-line {
     background-color: #F8F8F8;  
+    margin: 20px auto 0;
 }
 .compatible-text p {
     color: #F8F8F8;
@@ -192,6 +192,7 @@ h2 {color: #191818;}
     padding: 16px;
     width: 90%;
     font-weight: 500;
+    text-align: center;
 }
 .centre-content form .submit {
     background-color: #48A086;
@@ -201,10 +202,45 @@ h2 {color: #191818;}
 }
 .recherche-centre p:last-of-type {font-size: 18px; margin-left: auto;}
 
+/***** Il vous reste des questions *****/
+.accordion {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+.accordion-item {
+    color: #111;
+    margin: 1rem 0;
+    border-bottom: 1px solid #bdbdbd;
+} 
+.accordion-item:last-of-type {border-bottom: none;}
+.accordion-item-title {
+    color: #191818;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 20px;
+    font-size: 22px;
+}
+.accordion-item-title img {transition: 0.2s ease-out;}
+.accordion-item-title.active img {transform: rotate(-180deg);}
+.accordion-item-text {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+.accordion p {font-weight: 300;}
+.accordion-item-title, .accordion-item p {
+    padding-bottom: 20px;
+}
 /***** Une entreprise Française *****/
 .entreprise-content {padding: 0 5%;}
 .entreprise-content, .entreprise-text {gap: 30px;}
-.entreprise-img {border-radius: 32px; overflow: hidden;}
+.entreprise-img {overflow: hidden;}
 .entreprise-img img {
     vertical-align: middle;
     height: 100%;   
@@ -238,10 +274,11 @@ footer{padding: 100px 0;}
     .call-to-action_text {
         order: -1;
         text-align: left;
+        padding: 5% 0 5% 5%;
     }
     /***** Trouver mon centre *****/
     .centre-content form {flex-direction: initial;}
-
+    .centre-content form input:first-of-type {text-align: left;}
     /*****Nos avantages*****/
     .avantages-content .flex-column {
         flex-direction: initial;
@@ -252,6 +289,8 @@ footer{padding: 100px 0;}
     .avantages-text .title-line {margin: 10px auto 0 0;}
     .order {order: -1;}
     .call-to-action_btn .btn {margin: 0 auto 0 0;}
+
+    /***** Il vous reste des questions *****/
 
     /***** Une entreprise Française *****/
     .entreprise-content {flex-direction: initial; gap: 5%;}
