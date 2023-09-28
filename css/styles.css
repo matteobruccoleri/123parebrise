@@ -2,14 +2,14 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+html {scroll-behavior: smooth;}
 /***** Balises *****/
 body {
     background-color: #F8F8F8;
     color: #191818;
     font-family: "Brandon Grotesque", sans-serif;
     font-weight: 900;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);     
 }
 main {overflow: hidden; margin-bottom: -1px}
 section:not(:first-of-type) {padding-top: 100px;}

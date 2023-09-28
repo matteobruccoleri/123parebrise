@@ -75,7 +75,7 @@ const infiniteScroll = () => {
 const autoPlay = () => {
   if (window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
   // Autoplay the carousel after every 10000 ms
-  timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 10000);
+  timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 3000);
 }
 autoPlay();
 
