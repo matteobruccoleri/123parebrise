@@ -59,7 +59,7 @@ img, svg {vertical-align: middle;}
     text-decoration: none;
     color: #fff;
     transition: 0.3s linear;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
     justify-content: center;
     gap: 15px;
@@ -544,7 +544,6 @@ footer{padding: 100px 0;}
 
 @media screen and (min-width: 1024px) {
     h2 {font-size: 56px;}
-    .btn {font-size: 16px;}
     .container {width: 80%;}
     .title-line {height: 14px; width: 60px;}
 
@@ -676,8 +675,7 @@ footer{padding: 100px 0;}
 }
 
 @media screen and (min-width: 1920px) {
-    header .logo {height: 150px;}
-    
+    header .logo {height: 150px;}   
     .container {width: 60%;}
     footer .logo {height: 120px;}
 }
