@@ -59,7 +59,7 @@ img, svg {vertical-align: middle;}
     text-decoration: none;
     color: #fff;
     transition: 0.3s linear;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     justify-content: center;
     gap: 15px;
@@ -518,7 +518,7 @@ footer{padding: 100px 0;}
     h2 {font-size: 50px;}
     h3, .accordion-item-title {font-size: 28px;}
     p {font-size: 24px;}
-
+    .btn {font-size: 16px;}
     /***** Call -o action *****/
     .call-to-action_btn {flex-direction: initial;}
 
