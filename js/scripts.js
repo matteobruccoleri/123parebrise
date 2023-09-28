@@ -149,7 +149,7 @@ window.addEventListener('scroll', () => {
 });
 
 ///////////////////////////////////////////
-// Animation: Nos Avantages - title-img //
+// Animation: Quelques témoignages - title-img //
 const temoignagesTitleImg = document.querySelector(".temoignages .title-img");
 const temoignages = document.querySelector(".temoignages");
 
@@ -187,7 +187,7 @@ window.addEventListener('scroll', () => {
   
   const topEntrepriseToTopViewport = questions.getBoundingClientRect().top;
 
-  if (scrollTop > (scrollTop + topEntrepriseToTopViewport) - clientHeight * 0.1) {
+  if (scrollTop > (scrollTop + topEntrepriseToTopViewport) - clientHeight * 1) {
     entrepriseTitleImg.classList.add('rotate');
   };
 
