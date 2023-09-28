@@ -2,6 +2,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 /***** Balises *****/
 body {
     background-color: #F8F8F8;
@@ -9,29 +10,26 @@ body {
     font-family: "Brandon Grotesque", sans-serif;
     font-weight: 900;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    font-size: 1em;
 }
+main {overflow: hidden; margin-bottom: -1px}
+section:not(:first-of-type) {padding-top: 100px;}
+
+/* title*/
+h1, h2, h3 {font-weight: 900;}
+h1 {color: #F8F8F8; font-size: 8.5vw;}
+h2 {color: #191818; font-size: 30px; }
+h3 {color: #48A086; font-size: 20px;}
 p { 
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 500;
 }
 li {list-style: none;}
-main {overflow: hidden;}
-section:not(:first-of-type){padding-top: 100px;}
-h1, h2, h3 {
-    font-weight: 700;
-    color: #F8F8F8;
-    line-height: 120%;
-}
-h1{font-size: 8.5vw}
-h2, h3 {font-size: 32px;}
-h2 {color: #191818;}
+img, svg {vertical-align: middle;}
 
 /***** class commune *****/
 .flex {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
 }
 .flex-column {
     display: flex;
@@ -44,27 +42,28 @@ h2 {color: #191818;}
 .title-img {margin-top: 10px;width: 50px;}
 .uppercase {text-transform: uppercase;}
 .bg-black{background-color: #000;}
-.logo {height: 75px; vertical-align: middle;}
-.vague {vertical-align: bottom;width: 100%;}
+.logo {height: 75px;}
+.vague {vertical-align: bottom; width: 100%; margin-bottom: -1px;}
 .order {order: 0;}
 .title-line {
     height: 10px;
     background-color: #000;
     width: 40px;
+    margin-top: 10px;
 }
 /* btn */
 .btn {
     background-color: #48A086;
-    padding: 16px;
+    padding: 12px 0;
     border-radius: 50px;
     text-decoration: none;
     color: #fff;
     transition: 0.3s linear;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 500;
     justify-content: center;
     gap: 15px;
-    width: 90%;
+    width: 80%;
     margin: auto;
 }
 .secondary {background-color: #000;}
@@ -84,27 +83,53 @@ h2 {color: #191818;}
 .call-to-action {
     position: relative;
     align-items: center;
+   /* transform: translateX(100%);
+    animation: both animX 0.8s ease-in-out;*/
 }
+
 /*** call-to-action_img ***/
 .call-to-action_img{
     height: 40%;
     width: 100%;
     text-align: right;
+    padding-top: 4%;
+    transform: translateX(100%);
+    animation: both animX 0.6s ease-in-out;
+   /* animation-delay: 0.5s;*/
+    
 }
 .call-to-action_img img {
-    vertical-align: middle;
-    object-fit: cover;
-    width: 100%;
+    object-fit: contain;
+    height: 150px;
 }
+
+.call-to-action_text .title-img, .rotate {
+    animation: both rotate 1s ease-in-out;
+    animation-delay: 0.8s;
+}
+@keyframes rotate {
+    0% {transform: rotate(0deg);scale: 1;}
+    17% {scale: 1.3;}
+    33% {transform: rotate(10deg);}
+    66% {transform: rotate(-10deg);}
+    100% {transform: rotate(0deg);scale: 1;}
+}
+
+@keyframes animX {
+    0% {transform: translateX(100%);}
+    100% {transform: translateX(0%);}
+}
+
 /*** call-to-action_text ***/
 .call-to-action_text {
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
+    padding: 5% 0 8%;
 }
 /** call-to-action_btn **/
 .call-to-action_btn {
     gap: 15px;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
     padding-top: 5%;
 }
@@ -119,34 +144,85 @@ h2 {color: #191818;}
     border-bottom-left-radius: 32px;border-top-left-radius: 32px;
 }
 /* autoplus */
-.autoplus {margin-top: 2vh;}
-.autoplus-img {height: 100px;}
-.autoplus p {width: 90%; margin: auto;font-size: 18px;}
+.autoplus {
+    position: relative;
+    margin-top: 20px;
+    transform: translateY(50%);
+    opacity: 0;
+    transition: 1s ease-in-out;
+    }
+.autoplus-img {height: 75px;}
+.autoplus p {
+    width: 90%; 
+    margin: auto;
+    font-size: 12px;
+    font-weight: 900;
+    padding: 15px 0;
+}
 
+.autoplus.anim-y-top {
+    transform: translateY(0);
+    opacity: 1;
+}
 /***** Nos avantages *****/
-.avantages-content{gap: 50px;}
-.avantages-content .flex-column {gap: 30px;}
+.avantages-content{gap: 75px;}
+.avantages-content .flex-column {gap: 30px; justify-content: space-between;}
 .avantages-img,.avantages-img img, .avantages-text{width: 100%;}
 .avantages-img {
-    border-radius: 32px;
-    border: 8px solid #000;
+    border-radius: 25px;
+    border: 6px solid #000;
     overflow: hidden;
 }
 .avantages-img img {
-    vertical-align: middle;
     height: 100%;
     object-fit: cover;
 }
-.avantages-text h3 {font-size: 20px;}
-.parcours {display: none;}
+.avantages-text span {font-weight: 900;}
+.avantages-text p {padding-bottom: 10px;}
+
+/*** Parcours ***/
+.parcours {
+    display: none;
+    position: relative;
+    text-align: center;
+    margin: 1px 0;
+}
+.parcours-1, .parcours-2 {
+    width: 60%;
+    height: auto;
+    margin: auto;
+}
+.parcours-2 {margin-right: 100px;}
+[class^="cache"] {
+    height: 100%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background-color: #F8F8F8;
+    width: 100%;
+    margin-right: 200px;
+    z-index: 1;
+}
+/* Animation Parcours */
+.cache1.anim-x-right {
+    transform: translate(50%, -50%);
+    transition: 1.8s linear;
+}
+.cache2.anim-x-left {
+    transform: translate(-151%, -50%);
+    transition: 1.8s linear;
+}
 
 /***** Compatible avec toutes les assurances *****/
 .compatible-content{
     background-color: #48A086;
     gap: 30px;
-    margin-top: -2px;
+    margin-top: -1px;
+    padding-top: 40px;
 }
 .compatible-content h2{color: #F8F8F8;}
+.compatible-content h2 div { display: inline;}
 .compatible-content h2 span{
     background-color: #F8F8F8;
     display: inline-block;
@@ -162,14 +238,159 @@ h2 {color: #191818;}
     margin: auto;
     width: 90%;
 }
-.compatible-content .btn{margin: 0 auto 20px;}
+.compatible-content .btn{margin: 0 auto 40px;}
 
-/***** 40 000 avis positifs, voici quelqies témoignages*****/
+/***** 40 000 avis positifs, voici quelqies témoignages *****/
+.temoignages h2 span {font-size: 24px;}
+.temoignages {
+    width: 90%;
+    margin: auto;
+}
 
+/*** carousel ***/
+.carousel {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+.carousel.dragging {
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.carousel.dragging .card {
+    cursor: grabbing;
+    user-select: none;
+}
+
+/*** arrow ***/
+.arrow-left, .arrow-right {vertical-align: middle;}
+.arrow-left {transform: translateX(-20%);}
+.arrow-right {transform: translateX(20%) rotate(180deg);}
+
+/*** Wrapper ***/
+.wrapper {
+    max-width: 2000px;
+    position: relative;
+    margin: auto;
+}
+.wrapper i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+    color: #48A086;
+}
+.wrapper i:active {
+    transform: translateY(-50%) scale(0.85);
+}
+
+.wrapper i:first-child {
+    left: -22px;
+}
+
+.wrapper i:last-child {
+    right: -22px;
+}
+.wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 11px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 30px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+
+    padding: 0;
+}
+/*** Card ***/
+.card-logo {
+    border-radius: 50%;
+    height: 68px;
+    width: 68px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 3px 6px #00000029;
+}
+.card-logo img {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.carousel :where(.card, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel .card {
+    scroll-snap-align: start;
+    list-style: none;
+    background: #fff;
+    cursor: grab;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    width: 100%;
+    margin: initial;
+    justify-content: flex-start;
+    box-shadow: 0px 3px 10px #00000029;
+    align-self: stretch;
+}
+
+.user.flex {padding: 50px 50px 20px;}
+.user-temoignagne {padding: 20px 50px 50px;}
+.user.flex {
+    align-items: flex-start;
+    width: 100%;
+}
+.user-photo {height: 100px;}
+.user-description {padding-left: 20px;}
+.user-description p:first-of-type {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 32px;
+}
+.user-description p:last-of-type {font-size: 14px;}
+
+.note {
+    display: flex;
+    gap: 5px;
+    margin: 15px 0;   
+}
+.note img {height: 25px;}
+.note img:last-of-type {padding-left: 5px;}
+.user-temoignagne {border-top: 1px solid #e3e3e3;}
+.user-temoignagne p {font-size: 25px;}
+.temoignages .btn {
+    background-color: #48A086;
+    margin-top: 50px;
+}
 
 /***** Trouver mon centre *****/
 .centre-content, .centre-content form {gap: 40px;align-items: center;}
-.centre-content {padding-bottom: 100px;}
+.centre-content { padding: 100px 0;}
 .centre-content h2{
     color: #F8F8F8;
     font-size: 24px;
@@ -190,16 +411,19 @@ h2 {color: #191818;}
     outline: none;
     border: none;
     padding: 16px;
-    width: 90%;
-    font-weight: 500;
+    width: 80%;
+    font-weight: 600;
     text-align: center;
+    color: #48A086;
 }
+.centre-content form input::placeholder {color: #bdbdbd;}
 .centre-content form .submit {
     background-color: #48A086;
     color: #F8F8F8;
     cursor: pointer;
-    width: 90%;
+    transition: 0.3s ease-in-out;
 }
+.centre-content form .submit:hover { box-shadow: inset 0px 0px 10px 0px #18382e;}
 .recherche-centre p:last-of-type {font-size: 18px; margin-left: auto;}
 
 /***** Il vous reste des questions *****/
@@ -220,11 +444,11 @@ h2 {color: #191818;}
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 15px;
+    gap: 18px;
     position: relative;
     cursor: pointer;
     padding-bottom: 20px;
-    font-size: 22px;
+    font-size: 20px;
 }
 .accordion-item-title img {transition: 0.2s ease-out;}
 .accordion-item-title.active img {transform: rotate(-180deg);}
@@ -232,90 +456,295 @@ h2 {color: #191818;}
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+    width: 90%;
 }
-.accordion p {font-weight: 300;}
+.accordion p {font-weight: 400;}
 .accordion-item-title, .accordion-item p {
     padding-bottom: 20px;
 }
+
 /***** Une entreprise Française *****/
 .entreprise-content {padding: 0 5%;}
 .entreprise-content, .entreprise-text {gap: 30px;}
-.entreprise-img {overflow: hidden;}
+.entreprise-text, .entreprise-title h2 {color: #F8F8F8;}
+.entreprise-img {overflow: hidden; border-radius: 25px;}
 .entreprise-img img {
-    vertical-align: middle;
     height: 100%;   
     width: 100%;
     object-fit: cover;
 }
-.entreprise-text, .entreprise-title h2 {
-    color: #F8F8F8;
-}
+.entreprise-text p {line-height: 150%;}
+.entreprise-title h2 span {font-size: 26px;}
 
 /***** footer *****/
 footer{padding: 100px 0;}
 
-/***** @media queries *****/
+
+/*************************************/
+/********** @media queries **********/
+
 @media screen and (min-width: 375px) {
-   .margin-bottom{margin-bottom: 25px;}
-   h1,h2{font-size: 32px;}
-}
-
-@media screen and (min-width: 425px) {
-    h1,h2{font-size: 38px;}
-}
-
-@media screen and (min-width: 600px) {
-    h1,h2 {font-size: 4.35vw;}
+    h2 {font-size: 36px;}
+    h3 { font-size: 22px;}
+    p {font-size: 20px;}
+    .btn { width: 70%;}
 
     /***** Call -o action *****/
-    .call-to-action {flex-direction: initial;}
+   .call-to-action_img img {height: 220px;}
 
+   /***** Autoplus *****/
+   .autoplus p {font-size: 14px;}
+
+    /***** Compatible avec toutes les assurances *****/
+    .compatible-text p {font-size: 24px;}
+
+   /***** 40 000 avis positifs, voici quelqies témoignages *****/
+    .temoignages h2 span {font-size: 26px;}
+
+    /***** Une entreprise Française *****/
+    .entreprise-title h2 span { font-size: 32px;}
+}
+
+@media screen and (min-width: 425px) {   
+    h2 {font-size: 36px;}
+    .btn { width: 220px;}
+    .margin-bottom {margin-bottom: 40px;}
+
+    /***** Autolplus *****/
+    .autoplus p {font-size: 14px;}
+
+   /***** Compatible avec toutes les assurances *****/
+    .compatible-content h2 div { display: block;}
+
+     /***** Trouver mon centre *****/
+     .centre-content form input {width: 60%;}
+}
+
+@media screen and (min-width: 568px) {
+    h1 {font-size: 4.2vw;}
+    h2{ font-size: 42px;}
+    h3 {font-size: 20px;}
+
+    .parcours {display: block;}
+    .title {margin-bottom: 80px;}
+   
+    /***** Call -o action *****/
+    .call-to-action {flex-direction: initial;}
     .call-to-action_img, .call-to-action_text {height: 100%; width: 50%;}
+    .call-to-action_img {padding: 0;}
+    .call-to-action .title-img {width: 4vw;}
     .call-to-action_text {
         order: -1;
         text-align: left;
-        padding: 5% 0 5% 5%;
+        padding: 6% 0 6% 6%;
+    }       
+    .call-to-action_bg {width: 97%;}
+    .call-to-action_img img {
+        object-fit: cover;
+        height: inherit;
+        width: 100%;
     }
-    /***** Trouver mon centre *****/
-    .centre-content form {flex-direction: initial;}
-    .centre-content form input:first-of-type {text-align: left;}
+    .call-to-action_btn {justify-content: left;}
+    .call-to-action_btn .btn {margin: 0;}
+ 
     /*****Nos avantages*****/
-    .avantages-content .flex-column {
+    .avantages-content {gap: 0;}
+    .avantages-content .flex-column{
         flex-direction: initial;
-        align-items: center;
+        align-items: stretch;     
     }
-    .avantages-img {width: 30%;}
-    .avantages-text {width: 70%; text-align: left;}
+    .avantages-img {width: 35%;}
+    .avantages-text {width: 60%; text-align: left;}
     .avantages-text .title-line {margin: 10px auto 0 0;}
     .order {order: -1;}
-    .call-to-action_btn .btn {margin: 0 auto 0 0;}
+
+    /***** Trouver mon centre *****/
+    .centre-content form {flex-direction: initial;}
+    .centre-content form input:first-of-type {text-align: left; width: 50%;}
+    .centre-content form .submit { width: 180px;}
 
     /***** Il vous reste des questions *****/
+    .accordion-item-title {font-size: 24px;}
+    .accordion-item-title img { margin-right: 20px;}
 
     /***** Une entreprise Française *****/
-    .entreprise-content {flex-direction: initial; gap: 5%;}
-    .entreprise-img {width: 40%;}
-    .entreprise-text {width: 60%;}
-    .entreprise-text p {width: 80%;}
+    .entreprise-content {
+        flex-direction: initial;
+        gap: 5%;
+        justify-content: center;
+        }
+    .entreprise-text {width: 50%;}
+    .entreprise-img {
+        width: 40%;
+        object-fit: cover;
+        height: 100%;
+    }
     .entreprise-content .btn {margin: 0 auto 0 0;}
+    .entreprise-title h2 { font-size: 34px;}
+    .entreprise-title h2 span { font-size: 28px;}
+}
+
+@media screen and (min-width: 768px) {
+    h2 {font-size: 50px;}
+    h3, .accordion-item-title {font-size: 28px;}
+    p {font-size: 24px;}
+
+    /***** Call -o action *****/
+    .call-to-action_btn {flex-direction: initial;}
+
+    /***** Nos avantages *****/
+    .avantages-content .flex-column {align-items: center;}
+
+    /***** Compatible avec toutes les assurances *****/
+    .compatible-text p {font-size: 28px;}
+
+    /***** 40 000 avis positifs, voici quelqies témoignages *****/
+    .temoignages h2 span {font-size: 32px;}
+    
+    /***** Trouver mon centre *****/
+    .centre-content form input:first-of-type {text-align: left; width: 40%;}
+    .centre-content form .submit {width: 200px;}
+
+    /***** Il vous reste des questions *****/
+    .accordion-item-text {width: 80%;}
+
+    /***** Une entreprise Française *****/
+    .entreprise-title h2 { font-size: 40px;}
+    .entreprise-title h2 span { font-size: 32px;}
+}
+
+@media screen and (min-width: 1024px) {
+    h2 {font-size: 56px;}
+    .container {width: 80%;}
+    .title-line {height: 14px; width: 60px;}
+
+    /***** Autolplus *****/
+    .autoplus p {font-size: 16px;}
+
+    /***** Compatible avec toutes les assurances *****/
+    .compatible-text p {font-size: 32px;}
+
+    /***** Trouver mon centre *****/
+    .centre-content form input:first-of-type {text-align: left; width: 40%;}
+
+    /***** Il vous reste des questions *****/
+    h3, .accordion-item-title {font-size: 34px; }
+
+    /***** Une entreprise Française *****/
+    .entreprise-title h2 span { font-size: 40px;}
+    .entreprise-text p {width: 80%;}
 }
 
 @media screen and (min-width: 1280px) {
-    h2 {font-size: 56px;}
+    header .logo {height: 100px;}
+    footer .logo {height: 70px;}
     p {font-size: 28px;}
+    h2 {font-size: 60px;}
+    h3, .accordion-item-title {font-size: 42px;}
+    .title {margin-bottom: 100px;}
+    .title-line {width: 70px;}
+
+    /***** Autoplus *****/
+    .autoplus {margin-top: 0;}
+    .autoplus-img {
+        height: 80px;
+        position: absolute;
+        top: 0;
+        transform: translate(-50%, -50%);
+    }
+    .autoplus p {
+        font-size: 18px;
+        padding: 55px 0 15px;
+    }
+
+    /***** 40 000 avis positifs, voici quelqies témoignages *****/
+    .temoignages h2 span {font-size: 40px;}
+
+    /***** Nos avantages *****/
+    .avantages-img {
+        border: 8px solid #000;
+    }
+    
     /***** Trouver mon centre *****/
-    .centre-content, .centre-content form {gap: 25px;}
-    .centre-content {flex-direction: initial; justify-content: center;}
+    .centre-content, .centre-content form {gap: 30px;}
+    .centre-content {
+        flex-direction: initial;
+        justify-content: center;
+        padding: 125px 0;
+    }
+    .centre-content form {width: inherit;}
     .centre-content h2:first-of-type, .centre-content h2:last-of-type  {width: max-content; margin: 0;}
     .centre-content h2:last-of-type {text-align: end; margin-left: 75px;}
-    .centre-content h2:last-of-type span  {display: block;} 
+    .centre-content h2:last-of-type span  {display: block;}
+    .centre-content form input:first-of-type { width: 400px;}
+
+    /***** Une entreprise Française *****/
+    .entreprise-title h2 span { font-size: 48px;}
+    
 }
 
 @media screen and (min-width: 1440px) {
-    h2 {font-size: 72px;}
+    h2 {font-size: 70px;}
     p {font-size: 28px;}
+    .btn {font-size: 18px;}
+    .title-img {width: 60px;}
+    
+    /***** Autolplus *****/
+    .autoplus p {font-size: 20px;}
+
+    /***** Nos avantages *****/
+    .avantages-img {width: 30%;}
+
+    /***** Compatible avec toutes les assurances *****/
+    .compatible-content {padding-top: 0;}
+    .compatible-text p {font-size: 36px;}
+
+    /***** 40 000 avis positifs, voici quelqies témoignages *****/
+    .temoignages h2 span {font-size: 42px;}
+
     /***** Trouver mon centre *****/
-    .centre-content form input {width: 400px;}
+    .centre-content form input {width: 400px;} 
     .centre-content h2:first-of-type {font-size: 32px;}
     .centre-content h2:last-of-type {font-size: 22px;}
+
+    /***** Une entreprise Française *****/
+    .entreprise-title h2 {font-size: 60px;}
+    .entreprise-title h2 span { font-size: 60px;}
+    .entreprise-img {width: 35%;}
+}
+
+@media screen and (min-width: 1600px) {  
+    h2 {font-size: 78px;}
+    h3 {font-size: 46px;}
+    p {font-size: 30px;}
+    .btn {font-size: 22px; width: 280px;}
+    header .logo {height: 120px;}
+
+    /***** Autoplus *****/
+    .autoplus-img {height: 100px;}
+    .autoplus p {padding: 65px 0 15px;}
+
+    /***** Nos avantages *****/
+    .container {width: 70%;}
+    .avantages-content .flex-column { gap: 80px;}
+    .avantages-text {width: 60%;}
+
+    /***** Compatible avec toutes les assurances *****/
+    .compatible-text p {font-size: 42px;}
+  
+    /***** 40 000 avis positifs, voici quelqies témoignages *****/
+    .temoignages h2 span {font-size: 52px;}
+
+    /***** Une entreprise Française *****/
+    .entreprise-text {width: 45%;}
+    .entreprise-text p {width: 80%; line-height: 200%;}
+
+    footer .logo {height: 100px;}
+}
+
+@media screen and (min-width: 1920px) {
+    header .logo {height: 150px;}
+    
+    .container {width: 60%;}
+    footer .logo {height: 120px;}
 }
