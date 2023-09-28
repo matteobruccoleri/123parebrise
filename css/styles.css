@@ -258,80 +258,19 @@ img, svg {vertical-align: middle;}
     width: 90%;
     margin: auto;
 }
-
-/*** carousel ***/
-.carousel {
-    width: 90%;
-    margin: 0 auto;
+.swiper-container {
     overflow: hidden;
+    padding: 10px;
 }
-.carousel::-webkit-scrollbar {
-    display: none;
-}
-
-.carousel.no-transition {
-    scroll-behavior: auto;
-}
-.carousel.dragging {
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-}
-
-.carousel.dragging .card {
-    cursor: grabbing;
-    user-select: none;
-}
-
-/*** arrow ***/
-.arrow-left, .arrow-right {vertical-align: middle;}
-.arrow-left {transform: translateX(-20%);}
-.arrow-right {transform: translateX(20%) rotate(180deg);}
-
-/*** Wrapper ***/
-.wrapper {
-    max-width: 2000px;
-    position: relative;
-    margin: auto;
-}
-.wrapper i {
-    top: 50%;
-    height: 50px;
-    width: 50px;
-    cursor: pointer;
-    font-size: 1.25rem;
-    position: absolute;
-    text-align: center;
-    line-height: 50px;
+.swiper-backface-hidden .swiper-slide {
+    height: auto;
     background: #fff;
-    border-radius: 50%;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
-    transform: translateY(-50%);
-    transition: transform 0.1s linear;
-    color: #191818;
-}
-.wrapper i:active {
-    transform: translateY(-50%) scale(0.85);
-}
-
-.wrapper i:first-child {
-    left: -22px;
-}
-
-.wrapper i:last-child {
-    right: -22px;
-}
-.wrapper .carousel {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 3) - 11px);
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 30px;
+    display: flex;
+    flex-direction: column;
     border-radius: 8px;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-
-    padding: 0;
+    margin: initial;
+    justify-content: flex-start;
+    box-shadow: 0px 3px 10px #00000029;
 }
 
 /*** Card ***/
@@ -341,7 +280,6 @@ img, svg {vertical-align: middle;}
     width: 68px;
     overflow: hidden;
     position: relative;
-    box-shadow: 0px 3px 6px #00000029;
 }
 .card-logo img {
     width: 100%;
@@ -352,50 +290,29 @@ img, svg {vertical-align: middle;}
     object-fit: cover;
 }
 
-.carousel :where(.card, .img) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.carousel .card {
-    scroll-snap-align: start;
-    list-style: none;
-    background: #fff;
-    cursor: grab;
-    display: flex;
-    flex-direction: column;
-    border-radius: 8px;
-    width: 100%;
-    margin: initial;
-    justify-content: flex-start;
-    box-shadow: 0px 3px 10px #00000029;
-    align-self: stretch;
-}
-
-.user.flex {padding: 50px 50px 20px;}
-.user-temoignagne {padding: 20px 50px 50px;}
+.user.flex {padding: 40px 20px 20px;}
+.user-temoignagne {padding: 20px 20px 40px;}
 .user.flex {
     align-items: flex-start;
     width: 100%;
+    gap: 5%;
 }
 .user-photo {height: 100px;}
-.user-description {padding-left: 20px;}
 .user-description p:first-of-type {
     text-transform: uppercase;
     font-weight: 900;
-    font-size: 32px;
+    font-size: 20px;
 }
 .user-description p:last-of-type {font-size: 14px;}
 
 .note {
     display: flex;
     gap: 5px;
-    margin: 15px 0;   
+    margin: 5px 0;   
 }
-.note img {height: 25px;}
+.note img {height: 22px;}
 .note img:last-of-type {padding-left: 5px;}
 .user-temoignagne {border-top: 1px solid #e3e3e3;}
-.user-temoignagne p {font-size: 25px;}
 .temoignages .btn {
     background-color: #48A086;
     margin-top: 50px;
@@ -498,7 +415,7 @@ footer{padding: 100px 0;}
 
 @media screen and (min-width: 375px) {
     h1 {font-size: 32px;}
-    h2 {font-size: 36px;}
+    h2 {font-size: 32px;}
     h3 { font-size: 22px;}
     p {font-size: 20px;}
 
@@ -672,6 +589,7 @@ footer{padding: 100px 0;}
 
     /***** 40 000 avis positifs, voici quelqies témoignages *****/
     .temoignages h2 span {font-size: 40px;}
+    .user-description p:first-of-type {font-size: 26px;}
 
     /***** Nos avantages *****/
     .avantages-img {
@@ -747,6 +665,8 @@ footer{padding: 100px 0;}
   
     /***** 40 000 avis positifs, voici quelqies témoignages *****/
     .temoignages h2 span {font-size: 52px;}
+    .user.flex {padding: 40px 40px 20px;}
+    .user-temoignagne {padding: 20px 40px 40px;}
 
     /***** Une entreprise Française *****/
     .entreprise-text {width: 45%;}

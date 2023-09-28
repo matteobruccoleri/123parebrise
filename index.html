@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
@@ -27,7 +28,7 @@
     <!-- MAIN -->
     <main>
         <!-- Call to action -->
-        <section class="call-to-action flex-column">          
+        <section class="call-to-action flex-column">           
             <!-- call-to-action_img -->
             <div class="call-to-action_img">
                 <img src="img/switch.webp"alt="123-pare-brise garagiste pose un pare-brise">
@@ -146,11 +147,10 @@
                     <h2>+ de 40 000 avis&nbsp;positifs<span class="title-green">Voici quelques témoignages.</span></h2>
                     <img class="title-img" src="img/sourire.svg" alt="sourire" />
                 </div> 
-                  <!-- Carousel -->
-                <div class="wrapper">
-                    <i id="left" class="fa-solid fa-angle-left"></i>
-                    <ul class="carousel">
-                        <li class="card">
+                <!-- Carousel -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
                             <div class="user flex">
                                 <div class="card-logo">
                                     <img src="img/logos/logo-google.svg" alt="123 parebrise" draggable="false">
@@ -170,8 +170,8 @@
                             <div class="user-temoignagne">
                                 <p>“Très bon suivi de mon dossier suite à un changement de pare brise. Réparation de qualité. Au top !”</p>
                             </div>
-                        </li>
-                        <li class="card">
+                        </div>
+                        <div class="swiper-slide">
                             <div class="user flex">
                                 <div class="card-logo">
                                     <img src="img/logos/logo-facebook.svg" alt="123 parebrise" draggable="false">
@@ -191,8 +191,8 @@
                             <div class="user-temoignagne">
                                 <p>“Parfait. Je recommande . Prise en charge rapide et professionnelle.”</p>
                             </div>
-                        </li>
-                        <li class="card">
+                        </div>
+                        <div class="swiper-slide">
                             <div class="user flex">
                                 <div class="card-logo">
                                     <img src="img/logos/logo-avis-verifies.webp" alt="123 parebrise" draggable="false">
@@ -212,8 +212,8 @@
                             <div class="user-temoignagne">
                                 <p>“Rapide, travail propre, voiture de prêt, personnel super sympa. 100% satisfait, je recommande”</p>
                             </div>
-                        </li>
-                        <li class="card">
+                        </div>
+                        <div class="swiper-slide">
                             <div class="user flex">
                                 <div class="card-logo">                          
                                     <img src="img/logos/logo-google.svg" alt="123 parebrise" draggable="false">
@@ -233,8 +233,8 @@
                             <div class="user-temoignagne">
                                 <p>“Excellent accueil, agréable, courtois et très professionnel. Le résultat est parfait Merci..!”</p>
                             </div>
-                        </li>
-                        <li class="card">
+                        </div>
+                        <div class="swiper-slide">
                             <div class="user flex">
                                 <div class="card-logo">                                                         
                                     <img src="img/logos/logo-facebook.svg" alt="123 parebrise" draggable="false">
@@ -254,8 +254,8 @@
                             <div class="user-temoignagne">
                                 <p>“Rendez-vous rapide, efficace même dans les démarches avec l'assurance. Personnels souriants et très agréable”</p>
                             </div>
-                        </li>
-                        <li class="card">
+                        </div>
+                        <div class="swiper-slide">
                             <div class="user flex">
                                 <div class="card-logo">                                                         
                                     <img src="img/logos/logo-avis-verifies.webp" alt="123 parebrise" draggable="false">
@@ -275,11 +275,10 @@
                             <div class="user-temoignagne">
                                 <p>“Très bonne prestation, de la prise de rendez jusqu'à la réception du véhicule.”</p>
                             </div>
-                        </li>                      
-                    </ul>
-                    <i id="right" class="fa-solid fa-angle-right">              
-                    </i>
-                </div>                                         
+                        </div>
+                        
+                    </div>                  
+                </div>                                  
             </div>                                
         </section>
         <!-- Trouver mon centre -->
@@ -382,6 +381,7 @@
         </div> 
     </footer>
     <!-- JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 </html>
