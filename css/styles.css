@@ -518,7 +518,6 @@ footer{padding: 100px 0;}
     h2 {font-size: 50px;}
     h3, .accordion-item-title {font-size: 28px;}
     p {font-size: 24px;}
-    .btn {font-size: 16px;}
     /***** Call -o action *****/
     .call-to-action_btn {flex-direction: initial;}
 
@@ -545,6 +544,7 @@ footer{padding: 100px 0;}
 
 @media screen and (min-width: 1024px) {
     h2 {font-size: 56px;}
+    .btn {font-size: 16px;}
     .container {width: 80%;}
     .title-line {height: 14px; width: 60px;}
 
