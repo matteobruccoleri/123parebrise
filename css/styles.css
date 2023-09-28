@@ -36,7 +36,7 @@ img, svg {vertical-align: middle;}
     flex-direction: column;
 }
 .container {width: 90%; margin: auto;}
-.margin-bottom{margin-bottom: 30px;}
+.margin-bottom{margin-bottom: 40px;}
 .text-center {text-align: center;}
 .title-green {display: block;color: #48A086;}
 .title-img {margin-top: 10px;width: 50px;}
@@ -54,7 +54,7 @@ img, svg {vertical-align: middle;}
 /* btn */
 .btn {
     background-color: #48A086;
-    padding: 12px 0;
+    padding: 16px 0;
     border-radius: 50px;
     text-decoration: none;
     color: #fff;
@@ -83,8 +83,6 @@ img, svg {vertical-align: middle;}
 .call-to-action {
     position: relative;
     align-items: center;
-   /* transform: translateX(100%);
-    animation: both animX 0.8s ease-in-out;*/
 }
 
 /*** call-to-action_img ***/
@@ -94,18 +92,19 @@ img, svg {vertical-align: middle;}
     text-align: right;
     padding-top: 4%;
     transform: translateX(100%);
-    animation: both animX 0.6s ease-in-out;
-   /* animation-delay: 0.5s;*/
-    
+    animation: both animX 0.6s ease-in-out;  
 }
 .call-to-action_img img {
     object-fit: contain;
     height: 150px;
 }
 
-.call-to-action_text .title-img, .rotate {
+.call-to-action_text .title-img {
     animation: both rotate 1s ease-in-out;
     animation-delay: 0.8s;
+}
+.rotate {
+    animation: both rotate 1s ease-in-out;
 }
 @keyframes rotate {
     0% {transform: rotate(0deg);scale: 1;}
@@ -134,6 +133,7 @@ img, svg {vertical-align: middle;}
     padding-top: 5%;
 }
 .call-to-action_btn .secondary {border: 1px solid #fff;}
+
 /** call-to-action_bg **/
 .call-to-action_bg {
     position: absolute;
@@ -150,7 +150,7 @@ img, svg {vertical-align: middle;}
     transform: translateY(50%);
     opacity: 0;
     transition: 1s ease-in-out;
-    }
+}
 .autoplus-img {height: 75px;}
 .autoplus p {
     width: 90%; 
@@ -164,6 +164,7 @@ img, svg {vertical-align: middle;}
     transform: translateY(0);
     opacity: 1;
 }
+
 /***** Nos avantages *****/
 .avantages-content{gap: 75px;}
 .avantages-content .flex-column {gap: 30px; justify-content: space-between;}
@@ -295,7 +296,7 @@ img, svg {vertical-align: middle;}
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
     transform: translateY(-50%);
     transition: transform 0.1s linear;
-    color: #48A086;
+    color: #191818;
 }
 .wrapper i:active {
     transform: translateY(-50%) scale(0.85);
@@ -321,6 +322,7 @@ img, svg {vertical-align: middle;}
 
     padding: 0;
 }
+
 /*** Card ***/
 .card-logo {
     border-radius: 50%;
