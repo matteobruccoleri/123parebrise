@@ -16,7 +16,7 @@ section:not(:first-of-type) {padding-top: 100px;}
 
 /* title*/
 h1, h2, h3 {font-weight: 900;}
-h1 {color: #F8F8F8; font-size: 8.5vw;}
+h1 {color: #F8F8F8; font-size: 28px;}
 h2 {color: #191818; font-size: 30px; }
 h3 {color: #48A086; font-size: 20px;}
 p { 
@@ -484,10 +484,10 @@ footer{padding: 100px 0;}
 /********** @media queries **********/
 
 @media screen and (min-width: 375px) {
+    h1 {font-size: 32px;}
     h2 {font-size: 36px;}
     h3 { font-size: 22px;}
     p {font-size: 20px;}
-    .btn { width: 70%;}
 
     /***** Call -o action *****/
    .call-to-action_img img {height: 220px;}
@@ -505,8 +505,8 @@ footer{padding: 100px 0;}
     .entreprise-title h2 span { font-size: 32px;}
 }
 
-@media screen and (min-width: 425px) {   
-    h2 {font-size: 36px;}
+@media screen and (min-width: 425px) {  
+    h1 {font-size: 38px;} 
     .btn { width: 220px;}
     .margin-bottom {margin-bottom: 40px;}
 
