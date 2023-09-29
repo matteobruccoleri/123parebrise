@@ -150,6 +150,7 @@ img, svg {vertical-align: middle;}
     transform: translateY(50%);
     opacity: 0;
     transition: 1s ease-in-out;
+    align-items: center;
 }
 .autoplus-img {height: 75px;}
 .autoplus p {
@@ -167,6 +168,7 @@ img, svg {vertical-align: middle;}
 
 .autoplus .arrow {
     animation: infinite autoplus-arrow 1.5s linear;
+    margin-bottom: 25px;
 }
 
 @keyframes autoplus-arrow {
@@ -303,7 +305,7 @@ img, svg {vertical-align: middle;}
     font-weight: 900;
     font-size: 20px;
 }
-.user-description p:last-of-type {font-size: 14px;}
+.user-description p:last-of-type {font-size: 16px;}
 
 .note {
     display: flex;
@@ -344,7 +346,7 @@ img, svg {vertical-align: middle;}
     width: 80%;
     font-weight: 500;
     text-align: center;
-    color: #48A086;
+    color: #000;
 }
 .centre-content form input::placeholder {color: #bdbdbd;}
 .centre-content form .submit {
@@ -476,8 +478,11 @@ footer{padding: 100px 0;}
     }
     .call-to-action_btn {justify-content: left;}
     .call-to-action_btn .btn {margin: 0;}
- 
-    /*****Nos avantages*****/
+
+    /***** Autoplus *****/
+    .autoplus .arrow {order: 1;}
+
+    /***** Nos avantages *****/
     .avantages-content {gap: 0;}
     .avantages-content .flex-column{
         flex-direction: initial;
@@ -579,7 +584,7 @@ footer{padding: 100px 0;}
         height: 80px;
         position: absolute;
         top: 0;
-        transform: translate(-50%, -50%);
+        transform: translate(0%, -50%);
     }
     .autoplus p {
         font-size: 18px;
