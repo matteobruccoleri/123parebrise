@@ -147,17 +147,10 @@ img, svg {vertical-align: middle;}
 .autoplus {
     position: relative;
     margin-top: 20px;
-    transform: translateY(30%);
-    opacity: 0;
     transition: 1s ease-in-out;
     align-items: center;
-    animation: both autoplus 0.5s ease-out;
-    animation-delay: 1.5s;
 }
-@keyframes autoplus {
-    0% {transform: translateY(50%);}
-    100% {transform: translateY(0);opacity: 1;}
-}
+
 .autoplus-img {height: 75px;}
 .autoplus p {
     width: 90%; 
@@ -166,12 +159,6 @@ img, svg {vertical-align: middle;}
     font-weight: 900;
     padding: 15px 0;
 }
-/*
-.autoplus.anim-y-top {
-    transform: translateY(0);
-    opacity: 1;
-}
-*/
 .autoplus .arrow {
     animation: infinite autoplus-arrow 1.5s linear;
     margin-bottom: 25px;
@@ -326,8 +313,8 @@ img, svg {vertical-align: middle;}
 
 /*** fleche de navigation ***/
 .carousel .swiper-button-prev, .carousel .swiper-button-next {
-    height: 40px;
-    width: 40px;
+    height: 36px;
+    width: 36px;
     background-color: #F8F8F8;
     border-radius: 50%; 
     text-align: center;
@@ -628,7 +615,10 @@ footer{padding: 100px 0;}
     /***** 40 000 avis positifs, voici quelqies témoignages *****/
     .temoignages h2 span {font-size: 40px;}
     .user-description p:first-of-type {font-size: 26px;}
-
+    .carousel .swiper-button-prev, .carousel .swiper-button-next {
+        height: 40px;
+        width: 40px;
+    }
     /***** Nos avantages *****/
     .avantages-img {
         border: 8px solid #000;
