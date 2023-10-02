@@ -147,10 +147,16 @@ img, svg {vertical-align: middle;}
 .autoplus {
     position: relative;
     margin-top: 20px;
-    transform: translateY(50%);
+    transform: translateY(30%);
     opacity: 0;
     transition: 1s ease-in-out;
     align-items: center;
+    animation: both autoplus 0.5s ease-out;
+    animation-delay: 1.5s;
+}
+@keyframes autoplus {
+    0% {transform: translateY(50%);}
+    100% {transform: translateY(0);opacity: 1;}
 }
 .autoplus-img {height: 75px;}
 .autoplus p {
@@ -160,12 +166,12 @@ img, svg {vertical-align: middle;}
     font-weight: 900;
     padding: 15px 0;
 }
-
+/*
 .autoplus.anim-y-top {
     transform: translateY(0);
     opacity: 1;
 }
-
+*/
 .autoplus .arrow {
     animation: infinite autoplus-arrow 1.5s linear;
     margin-bottom: 25px;
@@ -175,7 +181,6 @@ img, svg {vertical-align: middle;}
     0% {transform: translateY(0);}
     50% {transform: translateY(10px);}
     100% {transform: translateY(0);}
-
 }
 
 /***** Nos avantages *****/
@@ -260,6 +265,9 @@ img, svg {vertical-align: middle;}
     width: 90%;
     margin: auto;
 }
+.carousel {
+    position: relative;
+}
 .swiper-container {
     overflow: hidden;
     padding: 10px;
@@ -291,7 +299,7 @@ img, svg {vertical-align: middle;}
     transform: translate(-50%, -50%);
     object-fit: cover;
 }
-
+/*** User ***/
 .user.flex {padding: 40px 20px 20px;}
 .user-temoignagne {padding: 20px 20px 40px;}
 .user.flex {
@@ -312,13 +320,39 @@ img, svg {vertical-align: middle;}
     gap: 5px;
     margin: 5px 0;   
 }
-.note img {height: 22px;}
+.note img {height: 20px;}
 .note img:last-of-type {padding-left: 5px;}
 .user-temoignagne {border-top: 1px solid #e3e3e3;}
-.temoignages .btn {
-    background-color: #48A086;
-    margin-top: 50px;
+
+/*** fleche de navigation ***/
+.carousel .swiper-button-prev, .carousel .swiper-button-next {
+    height: 40px;
+    width: 40px;
+    background-color: #F8F8F8;
+    border-radius: 50%; 
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    margin: 0;   
 }
+
+.carousel .swiper-button-prev {
+    left: 0;
+    transform: translate(-40%, -50%);
+}
+
+.carousel .swiper-button-next {
+    left: 100%;
+    transform: translate(-60%, -50%);
+}
+
+.carousel .swiper-button-prev::after,.carousel .swiper-button-next::after {
+    color: #18382e;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+
 
 /***** Trouver mon centre *****/
 .centre-content, .centre-content form {gap: 40px;align-items: center;}
@@ -453,7 +487,7 @@ footer{padding: 100px 0;}
 }
 
 @media screen and (min-width: 568px) {
-    h1 {font-size: 4.2vw;}
+    h1 {font-size: 4vw;}
     h2{ font-size: 42px;}
     h3 {font-size: 20px;}
 
@@ -468,9 +502,9 @@ footer{padding: 100px 0;}
     .call-to-action_text {
         order: -1;
         text-align: left;
-        padding: 6% 0 6% 6%;
+        padding: 5% 0 5% 5%;
     }       
-    .call-to-action_bg {width: 97%;}
+    .call-to-action_bg {width: 97.5%;}
     .call-to-action_img img {
         object-fit: cover;
         height: inherit;
@@ -680,7 +714,8 @@ footer{padding: 100px 0;}
 }
 
 @media screen and (min-width: 1920px) {
-    header .logo {height: 150px;}   
+    header .logo {height: 125px;}   
+    .call-to-action_img img {width: 95%;}
     .container {width: 60%;}
-    footer .logo {height: 120px;}
+    footer .logo {height: 110px;}
 }

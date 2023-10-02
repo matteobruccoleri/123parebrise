@@ -2,7 +2,7 @@ const { scrollTop, clientHeight } = document.documentElement;
 
 //////////////////////////
 // Animation: Autoplus //
-
+/*
 const autoplus = document.querySelector('.autoplus');
 
 window.addEventListener('scroll', () => {
@@ -14,7 +14,7 @@ window.addEventListener('scroll', () => {
   };
 
 });
-
+*/
 ///////////////////////////////////
 // Animation: Nos Avantages //////
 
