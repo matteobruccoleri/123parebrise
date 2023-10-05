@@ -573,7 +573,7 @@ footer{padding: 100px 0;}
     .container {width: 80%;}
     .title-line {height: 14px; width: 60px;}
 
-
+    header .logo {height: 90px;}
     /***** Call to action *****/
     .call-to-action_text {
         padding: 4% 0 4% 5%;
