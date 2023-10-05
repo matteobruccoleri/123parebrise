@@ -573,7 +573,6 @@ footer{padding: 100px 0;}
     .container {width: 80%;}
     .title-line {height: 14px; width: 60px;}
 
-    header .logo {height: 90px;}
     /***** Call to action *****/
     .call-to-action_text {
         padding: 4% 0 4% 5%;
@@ -600,7 +599,7 @@ footer{padding: 100px 0;}
 }
 
 @media screen and (min-width: 1280px) {
-    header .logo {height: 100px;}
+    header .logo {height: 90px;}
     footer .logo {height: 70px;}
     p {font-size: 28px;}
     h2 {font-size: 60px;}
