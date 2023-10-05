@@ -213,11 +213,11 @@ img, svg {vertical-align: middle;}
 /* Animation Parcours */
 .cache1.anim-x-right {
     transform: translate(50%, -50%);
-    transition: 1.8s linear;
+    transition: 1.5s linear;
 }
 .cache2.anim-x-left {
     transform: translate(-151%, -50%);
-    transition: 1.8s linear;
+    transition: 1.5s linear;
 }
 
 /***** Compatible avec toutes les assurances *****/
@@ -573,7 +573,16 @@ footer{padding: 100px 0;}
     .container {width: 80%;}
     .title-line {height: 14px; width: 60px;}
 
-    /***** Autolplus *****/
+
+    /***** Call to action *****/
+    .call-to-action_text {
+        padding: 4% 0 4% 5%;
+    }
+    .call-to-action_img img {
+        width: 95%;
+    }
+
+    /***** Autoplus *****/
     .autoplus p {font-size: 16px;}
 
     /***** Compatible avec toutes les assurances *****/
