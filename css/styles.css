@@ -149,7 +149,7 @@ img, svg {vertical-align: middle;}
 /* meilleure-enseigne_wrapper */
 .meilleure-enseigne_wrapper {
     position: relative;
-    margin-top: 20px;
+    margin-top: 10px;
     transition: 1s ease-in-out;
     align-items: center;
     /*height: 10vh;*/
