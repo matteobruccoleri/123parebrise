@@ -700,7 +700,7 @@ footer{padding: 100px 0;}
     h2 {font-size: 78px;}
     h3 {font-size: 46px;}
     p {font-size: 30px;}
-    .btn {font-size: 22px; width: 260px;}
+    .btn {font-size: 22px; width: 240px;}
     header .logo {height: 120px;}
 
     /***** meilleure-enseigne_wrapper *****/
@@ -732,4 +732,6 @@ footer{padding: 100px 0;}
     .call-to-action_img img {width: 95%;}
     .container {width: 60%;}
     footer .logo {height: 110px;}
+    .call-to-action_btn {width: 65%;}
+    .btn {width: 45%;}
 }
