@@ -16,7 +16,7 @@ section:not(:first-of-type) {padding-top: 100px;}
 
 /* title*/
 h1, h2, h3 {font-weight: 900;}
-h1 {color: #F8F8F8; font-size: 28px;}
+h1 {color: #F8F8F8; font-size: 24px;}
 h2 {color: #191818; font-size: 30px; }
 h3 {color: #48A086; font-size: 20px;}
 p { 
@@ -51,6 +51,7 @@ img, svg {vertical-align: middle;}
     width: 40px;
     margin-top: 10px;
 }
+
 /* btn */
 .btn {
     background-color: #48A086;
@@ -67,6 +68,7 @@ img, svg {vertical-align: middle;}
     margin: auto;
 }
 .secondary {background-color: #000;}
+
 /* btn hover */
 .btn:hover {background-color: #F8F8F8;}
 .primary:hover {color: #48A086;}
@@ -77,6 +79,7 @@ img, svg {vertical-align: middle;}
     height: 8px;
     width: 50%;
 }
+
 .bandeau span:first-of-type {background-color: #48A086;}
 
 /**** call-to-action ****/
@@ -143,28 +146,35 @@ img, svg {vertical-align: middle;}
     z-index: -1;
     border-bottom-left-radius: 32px;border-top-left-radius: 32px;
 }
-/* autoplus */
-.autoplus {
+/* meilleure-enseigne_wrapper */
+.meilleure-enseigne_wrapper {
     position: relative;
     margin-top: 20px;
     transition: 1s ease-in-out;
     align-items: center;
+    /*height: 10vh;*/
 }
 
-.autoplus-img {height: 75px;}
-.autoplus p {
+.meilleure-enseigne.mobile {display: none; height: 100px;}
+.meilleure-enseigne.desktop {
+    background-color: #F8F8F8;
+    border-radius: 15px;
+    width: 280px;
+    height: auto;
+}
+.meilleure-enseigne_wrapper p {
     width: 90%; 
     margin: auto;
     font-size: 12px;
     font-weight: 900;
     padding: 15px 0;
 }
-.autoplus .arrow {
-    animation: infinite autoplus-arrow 1.5s linear;
+.meilleure-enseigne_wrapper .arrow {
+    animation: infinite meilleure-enseigne_wrapper-arrow 1.5s linear;
     margin-bottom: 25px;
 }
 
-@keyframes autoplus-arrow {
+@keyframes meilleure-enseigne_wrapper-arrow {
     0% {transform: translateY(0);}
     50% {transform: translateY(10px);}
     100% {transform: translateY(0);}
@@ -437,7 +447,7 @@ footer{padding: 100px 0;}
 /********** @media queries **********/
 
 @media screen and (min-width: 375px) {
-    h1 {font-size: 32px;}
+    h1 {font-size: 28px;}
     h2 {font-size: 32px;}
     h3 { font-size: 22px;}
     p {font-size: 20px;}
@@ -445,8 +455,8 @@ footer{padding: 100px 0;}
     /***** Call -o action *****/
    .call-to-action_img img {height: 220px;}
 
-   /***** Autoplus *****/
-   .autoplus p {font-size: 14px;}
+   /***** meilleure-enseigne_wrapper *****/
+   .meilleure-enseigne_wrapper p {font-size: 14px;}
 
     /***** Compatible avec toutes les assurances *****/
     .compatible-text p {font-size: 24px;}
@@ -459,12 +469,12 @@ footer{padding: 100px 0;}
 }
 
 @media screen and (min-width: 425px) {  
-    h1 {font-size: 38px;} 
+    h1 {font-size: 30px;} 
     .btn { width: 220px;}
     .margin-bottom {margin-bottom: 40px;}
 
     /***** Autolplus *****/
-    .autoplus p {font-size: 14px;}
+    .meilleure-enseigne_wrapper p {font-size: 14px;}
 
    /***** Compatible avec toutes les assurances *****/
     .compatible-content h2 div { display: block;}
@@ -500,8 +510,8 @@ footer{padding: 100px 0;}
     .call-to-action_btn {justify-content: left;}
     .call-to-action_btn .btn {margin: 0;}
 
-    /***** Autoplus *****/
-    .autoplus .arrow {order: 1;}
+    /***** meilleure-enseigne_wrapper *****/
+    .meilleure-enseigne_wrapper .arrow {order: 1;}
 
     /***** Nos avantages *****/
     .avantages-content {gap: 0;}
@@ -581,8 +591,8 @@ footer{padding: 100px 0;}
         width: 95%;
     }
 
-    /***** Autoplus *****/
-    .autoplus p {font-size: 16px;}
+    /***** meilleure-enseigne_wrapper *****/
+    .meilleure-enseigne_wrapper p {font-size: 16px;}
 
     /***** Compatible avec toutes les assurances *****/
     .compatible-text p {font-size: 32px;}
@@ -607,15 +617,21 @@ footer{padding: 100px 0;}
     .title {margin-bottom: 100px;}
     .title-line {width: 70px;}
 
-    /***** Autoplus *****/
-    .autoplus {margin-top: 0;}
-    .autoplus-img {
-        height: 80px;
+    /***** meilleure-enseigne_wrapper *****/ 
+    .meilleure-enseigne_wrapper {margin-top: 0;}
+    .meilleure-enseigne  {
         position: absolute;
         top: 0;
         transform: translate(0%, -50%);
     }
-    .autoplus p {
+    .meilleure-enseigne.desktop {
+        background-color: #F8F8F8;
+        border-radius: 15px;
+        padding: 25px;
+        width: 20vw;
+        height: auto;
+    }
+    .meilleure-enseigne_wrapper p {
         font-size: 18px;
         padding: 55px 0 15px;
     }
@@ -657,7 +673,7 @@ footer{padding: 100px 0;}
     .title-img {width: 60px;}
     
     /***** Autolplus *****/
-    .autoplus p {font-size: 20px;}
+    .meilleure-enseigne_wrapper p {font-size: 20px;}
 
     /***** Nos avantages *****/
     .avantages-img {width: 30%;}
@@ -684,12 +700,12 @@ footer{padding: 100px 0;}
     h2 {font-size: 78px;}
     h3 {font-size: 46px;}
     p {font-size: 30px;}
-    .btn {font-size: 22px; width: 280px;}
+    .btn {font-size: 22px; width: 260px;}
     header .logo {height: 120px;}
 
-    /***** Autoplus *****/
-    .autoplus-img {height: 100px;}
-    .autoplus p {padding: 65px 0 15px;}
+    /***** meilleure-enseigne_wrapper *****/
+    .meilleure-enseigne {height: 100px;}
+    .meilleure-enseigne_wrapper p {padding-top: 7vh;}
 
     /***** Nos avantages *****/
     .container {width: 70%;}
